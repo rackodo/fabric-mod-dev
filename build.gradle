@@ -22,12 +22,16 @@ loom {
     splitEnvironmentSourceSets()
 
 	mods {
-		"modid" {
+		"minesillies" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}
 	}
 
+}
+
+fabricApi {
+	configureDataGeneration()
 }
 
 dependencies {
