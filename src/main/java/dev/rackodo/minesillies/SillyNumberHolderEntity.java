@@ -11,11 +11,11 @@ import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.math.BlockPos;
 
-public class SillyContainerEntity extends BlockEntity {
-	int number = 7;
+public class SillyNumberHolderEntity extends BlockEntity {
+	public int number = 7;
 
-	public SillyContainerEntity(BlockPos pos, BlockState state) {
-		super(MineSillies.SILLY_CONTAINER_ENTITY, pos, state);
+	public SillyNumberHolderEntity(BlockPos pos, BlockState state) {
+		super(MineSillies.SILLY_NUMBER_HOLDER_ENTITY, pos, state);
 	}
 
 	// Serialise the BlockEntity
