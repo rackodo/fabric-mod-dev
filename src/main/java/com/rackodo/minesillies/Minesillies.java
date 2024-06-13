@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
@@ -25,6 +27,8 @@ public class Minesillies implements ModInitializer {
 	public static final Item ITEM_BOBBY = new Item(new Item.Settings());
 	public static final Item ITEM_CONN = new Item(new Item.Settings());
 
+	public static final Block BLOCK_SILLY = new Block(Block.Settings.create().strength(4.0f));
+
 	private static final ItemGroup ITEM_GROUP_SILLIES = FabricItemGroup.builder()
 	.icon(() -> new ItemStack(ITEM_SHUGAT))
 	.displayName(Text.translatable("itemGroup.minesillies.sillies"))
@@ -34,6 +38,7 @@ public class Minesillies implements ModInitializer {
 		entries.add(ITEM_BLEEP);
 		entries.add(ITEM_BOBBY);
 		entries.add(ITEM_CONN);
+		entries.add(BLOCK_SILLY);
 	})
 	.build();
 
@@ -45,11 +50,16 @@ public class Minesillies implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 
+		Registry.register(Registries.BLOCK, new Identifier("minesillies", "silly_block"), BLOCK_SILLY);
+
+		Registry.register(Registries.ITEM, new Identifier("minesillies", "silly_block"), new BlockItem(BLOCK_SILLY, new Item.Settings()));
+
 		Registry.register(Registries.ITEM, new Identifier("minesillies", "shugat"), ITEM_SHUGAT);
 		Registry.register(Registries.ITEM, new Identifier("minesillies", "midley"), ITEM_MIDLEY);
 		Registry.register(Registries.ITEM, new Identifier("minesillies", "bleep"), ITEM_BLEEP);
 		Registry.register(Registries.ITEM, new Identifier("minesillies", "bobby"), ITEM_BOBBY);
 		Registry.register(Registries.ITEM, new Identifier("minesillies", "conn"), ITEM_CONN);
+
 
 		Registry.register(Registries.ITEM_GROUP, new Identifier("minesillies", "sillies"), ITEM_GROUP_SILLIES);
 	}
