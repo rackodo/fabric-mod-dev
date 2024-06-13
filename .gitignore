@@ -1,53 +1,46 @@
-# Gradle Gitignore
-.gradle
-**/build/
-!src/**/build/
+# gradle
 
-## Ignore Gradle GUI config
-gradle-app.setting
+.gradle/
+build/
+out/
+classes/
 
-## Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
+# eclipse
 
-## Avoid ignore Gradle wrappper properties
-!gradle-wrapper.properties
+*.launch
 
-## Cache of project
-.gradletasknamecache
+# idea
 
-## Eclipse Gradle plugin generated files
-## Eclipse Core
-.project
-## JDT-specific (Eclipse Java Development Tools)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# vscode
+
+.settings/
+.vscode/
+bin/
 .classpath
+.project
 
-# macOS Gitignore
-## General
-.DS_Store
-.AppleDouble
-.LSOverride
+# macos
 
-## Icon must end with two \r
-Icon
+*.DS_Store
 
-## Thumbnails
-._*
+# fabric
 
-## Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-## Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-# Fabric Mod Dev (custom)
 run/
+
+# java
+
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
