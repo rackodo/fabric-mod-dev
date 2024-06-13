@@ -1,6 +1,0 @@
-{
-	"parent": "block/cube_all",
-	"textures": {
-	  "all": "minesillies:block/silly_block"
-	}
-  }
