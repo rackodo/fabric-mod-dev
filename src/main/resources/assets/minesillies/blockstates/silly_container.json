@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=east" : { "model": "minesillies:block/silly_container", "y": 90 },
+    "facing=north": { "model": "minesillies:block/silly_container" },
+    "facing=south": {"model": "minesillies:block/silly_container", "y": 180 },
+    "facing=west": { "model": "minesillies:block/silly_container", "y": 270 }
+  }
+}
